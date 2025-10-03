@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iqra Hussain | Portfolio</title>
+  <meta name="description" content="Portfolio of Iqra Hussain – UI/UX Designer & Creative Developer.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Reset + Base */
+   
+   
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #222;
+    }
+    a {text-decoration:none;color:inherit;}
+    img {max-width:100%;display:block;}
+    .container {width:90%;max-width:1200px;margin:auto;}
+/* Dark Mode */
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .nav-link {
+  color: #ddd;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+  color: #60a5fa; /* light blue */
+}
+
+body.dark-mode .theme-btn {
+  color: #ddd;
+}
+
+body.dark-mode .footer {
+  background: #1a1a1a;
+  color: #aaa;
+}
+
+    /* Navbar */
+    /* Navbar Base */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb; /* Blue */
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #111;
+  transition: color 0.3s;
+}
+
+/* Hover + Active underline effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #9333ea); /* blue → purple */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #2563eb;
+}
+
+/* Dark Mode Button */
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #111;
+  transition: color 0.3s;
+}
+
+.theme-btn:hover {
+  color: #2563eb;
+}
+
+    /* Hero */
+    /* Hero Slider */
+.hero-slider {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-slider {
+  background-size: 80% 80%;
+  background-position: center;
+  animation: slideshow 40s infinite ease-in-out;
+}
+
+/* Image Slideshow Keyframes (7–8 images) */
+@keyframes slideshow {
+  20%   { background-image: url('1.jpg'); }
+  14%  { background-image: url('2.jpg'); }
+  28%  { background-image: url('3.jpg'); }
+  42%  { background-image: url('4.jpg'); }
+  56%  { background-image: url('5.jpg'); }
+  70%  { background-image: url('6.jpg'); }
+  85%  { background-image: url('1.jpg'); }
+  100% { background-image: url('2.jpg'); }
+}
+
+/* Overlay Text */
+.hero-overlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: #f7f9f4;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeInText 2s ease-in-out infinite alternate;
+}
+
+.highlight {
+  color: #60cee9; /* purple accent */
+}
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0.6; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1.05); }
+}
+
+
+    /* About Preview */
+    .about {padding:4rem 0;text-align:center;}
+    .about h2 {font-size:2rem;margin-bottom:1rem;}
+    .stats {display:flex;justify-content:center;gap:2rem;margin-top:2rem;flex-wrap:wrap;}
+    .stat h3 {font-size:1.5rem;color:#6c3ef0;}
+
+    /* Projects */
+    .projects {padding:4rem 0;background:#fafafa;text-align:center;}
+    .projects h2 {font-size:2rem;margin-bottom:2rem;}
+    .project-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+    .project-card {
+      background:#fff;border-radius:10px;overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);transition:0.3s;
+    }
+    .project-card:hover {transform:translateY(-5px);}
+    .project-card h3 {margin:1rem;font-size:1.2rem;}
+    .project-card p {margin:0 1rem 1rem;color:#555;}
+
+    /* Testimonials */
+    .testimonials {padding:4rem 0;text-align:center;}
+    .testimonials h2 {font-size:2rem;margin-bottom:2rem;}
+    .testimonial-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
+    .testimonial {
+      background:#fff;padding:1.5rem;border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);text-align:left;
+    }
+    .testimonial p {margin-bottom:1rem;color:#444;}
+
+    /* Contact CTA */
+    .cta {padding:4rem 0;background:#6c3ef0;color:#fff;text-align:center;}
+    .cta h2 {font-size:2rem;margin-bottom:1rem;}
+    .cta a {background:#fff;color:#6c3ef0;font-weight:600;padding:0.75rem 1.5rem;border-radius:6px;display:inline-block;}
+    .cta a:hover {background:#eee;}
+
+    /* Footer */
+    .footer {padding:2rem 0;background:#222;color:#ddd;text-align:center;}
+    .social-links {margin-top:1rem;display:flex;justify-content:center;gap:1rem;}
+    .social-links a {color:#ddd;font-size:1.2rem;transition:0.3s;}
+    .social-links a:hover {color:#6c3ef0;}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">Iqra Hussain</a>
+  
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+       
+      </nav>
+  
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+  
+
+  <!-- Hero -->
+
+  <section class="hero-slider">
+    <div class="hero-overlay">
+      <h1 class="hero-title">30% off <span class="highlight">On First Order</span></h1>
+    </div>
+  </section>
+  
+  
+    </div>
+  </section>
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+  
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+  
+      // Change icon (moon <-> sun)
+      const icon = toggleBtn.querySelector("i");
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    });
+  </script>
+  
+  <!-- About Preview -->
+   
+  <section class="about container">
+    <h2>About Me</h2>
+    <p>I’m passionate about creating designs that solve problems and look great. Leading TechMophix, I combine creativity with strategy to deliver world-class experiences.</p>
+    <div class="stats">
+      <div class="stat"><h3>50+</h3><p>Projects</p></div>
+      <div class="stat"><h3>25+</h3><p>Clients</p></div>
+      <div class="stat"><h3>6+</h3><p>Years Experience</p></div>
+    </div>
+  </section>
+
+  <!-- Projects Preview -->
+  <section class="projects">
+    <div class="container">
+      <h2>Recent Work</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="e commerce.png" alt="Project 1">
+          <h3>E-Commerce Website</h3>
+          <p>Modern and responsive store design for electronics products.</p>
+        </div>
+        <div class="project-card">
+          <img src="restaurant.png" alt="Project 2">
+          <h3>Restaurant Branding</h3>
+          <p>Full brand identity: logo, menu, and web presence.</p>
+        </div>
+        <div class="project-card">
+          <img src="web design.png" alt="Project 3">
+          <h3>Web Design</h3>
+          <p>Minimal web design with bold visuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>"Iqra transformed our app's user experience completely. It’s intuitive, modern, and beautiful."</p>
+          <h4>- Sarah Johnson</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Her designs exceeded expectations. The perfect blend of creativity and usability."</p>
+          <h4>- Michael Chen</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Let’s Work Together</h2>
+      <p>Ready to bring your vision to life? Let’s collaborate.</p>
+      <a href="contact.html">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Iqra Hussain. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.behance.net/iqrahussain11"><i class="fab fa-behance"></i></a>
+        <a href="https://www.linkedin.com/in/iqra-hussain-b64748236/"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+<!-- Paste this into the <body> of your HTML (preferably just before </body>) -->
+<!-- ====== WhatsApp floating button ====== -->
+<a
+  class="whatsapp-float"
+  href="https://wa.me/923255517229?text=Assalamualaikum%20I%20saw%20your%20website%20and%20want%20to%20get%20in%20touch."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <!-- Inline WhatsApp SVG icon (keeps it self-contained) -->
+  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+    <path fill="#fff" d="M20.52 3.48A11.88 11.88 0 0012 .5 11.82 11.82 0 003.5 12c0 2.08.57 4.12 1.66 5.9L3 21l3.3-.86A11.82 11.82 0 0012 23.5c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.38-8.12zM12 21c-1.9 0-3.77-.5-5.36-1.43l-.38-.22-1.95.51.52-1.9-.25-.39A9.07 9.07 0 013 12 9 9 0 1112 21zm4.37-6.06c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.12-.12.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.54-1.31-.74-1.8-.2-.48-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.31-.22.24-.86.84-.86 2.05 0 1.2.88 2.36 1.01 2.52.12.16 1.74 2.68 4.22 3.76 2.96 1.31 2.96.87 3.5.81.54-.06 1.73-.7 1.98-1.37.25-.67.25-1.25.18-1.37-.07-.12-.26-.19-.5-.31z"/>
+  </svg>
+</a>
+
+<!-- ====== Styles (add to your CSS file or inside <style> in head) ====== -->
+<style>
+.whatsapp-float{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(37,211,102,0.28);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.whatsapp-float svg{ display:block; }
+.whatsapp-float:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(37,211,102,0.28);
+}
+
+/* smaller screens adjust spacing */
+@media (max-width: 420px){
+  .whatsapp-float{ right: 14px; bottom: 14px; width: 50px; height: 50px; }
+}
+</style>
+
+</body>
+</html>

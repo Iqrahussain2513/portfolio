@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Iqra Hussain | UI/UX Designer</title>
+    <meta name="description" content="Explore Iqra Hussain's portfolio of UI/UX design projects, mobile apps, web designs, and branding work">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Iqra Hussain</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-hero-content">
+                <h1>My Portfolio</h1>
+                <p>Explore my latest design projects and see how I transform ideas into beautiful, functional experiences</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ui-ux">UI/UX Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="ui-ux web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cosmetic Web Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project1" class="https://www.behance.net/gallery/188908955/About-us-page" data-project="1">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/188908955/About-us-page" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">UI/UX Design</span>
+                        </div>
+                        <h3>Cosmetic Web Design</h3>
+                        <p>Modern e-commerce website design for cosmetic brand with intuitive user experience and beautiful product showcase.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Cosmetic Brand</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="branding graphic">
+                    <div class="portfolio-image">
+                        <img src="restaurant branding.png" alt="Food Delivery App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project2" class="https://www.behance.net/gallery/235773395/Food-Delivery-app" data-project="2">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/235773395/Food-Delivery-app" target="https://www.behance.net/gallery/235773395/Food-Delivery-app" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">App Design</span>
+                        </div>
+                        <h3>Restaurant Branding</h3>
+                        <p>Complete restaurant branding package including logo design, menu design,App design and mockup designs for visual identity.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Restaurant Client</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="web-design">
+                    <div class="portfolio-image">
+                        <img src="e commerce.png" alt="E-Commerce Web Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project3" class="https://www.behance.net/gallery/235773933/E-Commerce-website" data-project="3">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/235773933/E-Commerce-website" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Web Design</span>
+                        </div>
+                        <h3>E-Commerce Web Design</h3>
+                        <p>Creative Web design showcasing natural beauty and artistic vision with stunning visual composition.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Creative Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="ui-ux web">
+                    <div class="portfolio-image">
+                        <img src="image fiver copy.png" alt="About Us Page Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project4" class="https://www.behance.net/gallery/188876103/Bluespace" data-project="4">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/188876103/Bluespace" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">UI/UX Design</span>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Modern and engaging about us page design with compelling storytelling and visual hierarchy.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Corporate Client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="mobile App">
+                    <div class="portfolio-image">
+                        <img src="Rectangle (1).png" alt="Find Home App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project5" class="https://www.behance.net/gallery/188875499/Property-investing-App-Screens" data-project="5">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/188875499/Property-investing-App-Screens" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">App Design</span>
+                            <span class="tag">Find Home</span>
+                        </div>
+                        <h3>App Design</h3>
+                        <p>Creative UI/UX design and marketing materials designed to engage audiences and drive brand awareness.</p>
+                        <div class="https://www.behance.net/gallery/188875499/Property-investing-App-Screens">
+                            <span class="project-year">2023</span>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="web-design">
+                    <div class="portfolio-image">
+                        <img src="zong.png" alt="Poster Designs">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project6" class="https://www.behance.net/gallery/235774643/Zong-Online-Store" data-project="6">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/235774643/Zong-Online-Store" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">Web design</span>
+                            <span class="tag">Poster Design</span>
+                        </div>
+                        <h3>zong Store design</h3>
+                        <p>Diverse collection of web designs showcasing creative vision and strong visual communication skills.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Various Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item" data-category="mobile App">
+                    <div class="portfolio-image">
+                        <img src="Almarai mob.png">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project7" class="https://www.behance.net/gallery/235775729/ALMARAI-Al-Baik-Design?share=1" data-project="7">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/235775729/ALMARAI-Al-Baik-Design?share=1" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">App Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3>AlMARAI App Design</h3>
+                        <p>Luxury APP design project showcasing sophisticated visual identity and premium aesthetic appeal.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Luxury Brand</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item" data-category="mobile App">
+                    <div class="portfolio-image">
+                        <img src="female.png" alt="Scenerie Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#project8" class="https://www.behance.net/gallery/188877937/Social-Justice" data-project="8">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </a>
+                                <a href="https://www.behance.net/gallery/188877937/Social-Justice" target="_blank" class="portfolio-external">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tags">
+                            <span class="tag">mobile-app</span>
+                            <span class="tag">Female Cycle</span>
+                        </div>
+                        <h3>Female Cycle</h3>
+                        <p>Beautiful scenic design work showcasing artistic vision and creative composition.</p>
+                        <div class="portfolio-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-client">Creative Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-tags" id="modalTags"></div>
+                    <div class="modal-description" id="modalDescription"></div>
+                    <div class="modal-info">
+                        <div class="info-item">
+                            <h4>Client</h4>
+                            <p id="modalClient"></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Year</h4>
+                            <p id="modalYear"></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Role</h4>
+                            <p id="modalRole"></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Tools</h4>
+                            <p id="modalTools"></p>
+                        </div>
+                    </div>
+                    <div class="modal-process">
+                        <h4>Design Process</h4>
+                        <div class="process-steps" id="modalProcess"></div>
+                    </div>
+                    <div class="modal-results">
+                        <h4>Results</h4>
+                        <p id="modalResults"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="modalLiveLink">View Live Project</a>
+                <a href="contact.html" class="btn btn-secondary">Start Similar Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Working Together?</h2>
+                <p>Let's discuss your next project and create something amazing</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Iqra Hussain</h3>
+                    <p>UI/UX Designer crafting intuitive & aesthetic digital experiences</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">UI/UX Design</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                        <li><a href="services.html">Branding</a></li>
+                        <li><a href="services.html">Mobile App Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> techmophix@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +92 (325 5517229)</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Iqra Hussain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="portfolio.js"></script>
+    <!-- Paste this into the <body> of your HTML (preferably just before </body>) -->
+<!-- ====== WhatsApp floating button ====== -->
+<a
+class="whatsapp-float"
+href="https://wa.me/923255517229?text=Assalamualaikum%20I%20saw%20your%20website%20and%20want%20to%20get%20in%20touch."
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Chat on WhatsApp"
+>
+<!-- Inline WhatsApp SVG icon (keeps it self-contained) -->
+<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+  <path fill="#fff" d="M20.52 3.48A11.88 11.88 0 0012 .5 11.82 11.82 0 003.5 12c0 2.08.57 4.12 1.66 5.9L3 21l3.3-.86A11.82 11.82 0 0012 23.5c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.38-8.12zM12 21c-1.9 0-3.77-.5-5.36-1.43l-.38-.22-1.95.51.52-1.9-.25-.39A9.07 9.07 0 013 12 9 9 0 1112 21zm4.37-6.06c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.12-.12.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.54-1.31-.74-1.8-.2-.48-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.31-.22.24-.86.84-.86 2.05 0 1.2.88 2.36 1.01 2.52.12.16 1.74 2.68 4.22 3.76 2.96 1.31 2.96.87 3.5.81.54-.06 1.73-.7 1.98-1.37.25-.67.25-1.25.18-1.37-.07-.12-.26-.19-.5-.31z"/>
+</svg>
+</a>
+
+<!-- ====== Styles (add to your CSS file or inside <style> in head) ====== -->
+<style>
+.whatsapp-float{
+position: fixed;
+right: 20px;
+bottom: 20px;
+z-index: 9999;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 56px;
+height: 56px;
+background: #25D366; /* WhatsApp green */
+border-radius: 50%;
+box-shadow: 0 6px 18px rgba(37,211,102,0.28);
+text-decoration: none;
+transition: transform .15s ease, box-shadow .15s ease;
+}
+.whatsapp-float svg{ display:block; }
+.whatsapp-float:hover{
+transform: translateY(-4px);
+box-shadow: 0 10px 22px rgba(37,211,102,0.28);
+}
+
+/* smaller screens adjust spacing */
+@media (max-width: 420px){
+.whatsapp-float{ right: 14px; bottom: 14px; width: 50px; height: 50px; }
+}
+</style>
+
+</body>
+</html>
